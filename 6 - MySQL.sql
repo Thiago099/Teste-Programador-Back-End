@@ -1,5 +1,5 @@
-// Questões de SQL - MySql
-// Considere o seguinte modelo
+-- Questões de SQL - MySql
+-- Considere o seguinte modelo
 CREATE DATABASE tsa_teste_backend_bd;
 USE tsa_teste_backend_bd;
 
