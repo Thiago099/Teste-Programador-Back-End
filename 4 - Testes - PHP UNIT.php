@@ -1,4 +1,5 @@
 <?php
+
 include '2 - Funções e arrays.php';
 
 use PHPUnit\Framework\TestCase;
