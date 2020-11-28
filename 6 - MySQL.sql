@@ -81,4 +81,4 @@ SELECT f AS organização_que_tem_o_funcionário_mais_novo
 FROM (
   SELECT o.nome AS f,MIN(YEAR(CURDATE())-YEAR(data_nascimento)) AS idade_do_funcionario
   FROM colaborador c INNER JOIN organizacao o ON c.organizacao_id=o.id
-)AS querry;
+)AS query;
