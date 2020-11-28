@@ -27,6 +27,7 @@ $funcionarios = [
 ];
 
 // a) Uma função que retorne o nome do funcionário mais jovem;
+
 function mais_jovem($f){
   $ret=$f[0];
   for ($i=1; $i < count($f); $i++) {
@@ -35,13 +36,16 @@ function mais_jovem($f){
   return $ret['nome'];
 }
 echo mais_jovem($funcionarios);
+
 // b) Uma função que gere um novo array agrupando os funcionarios por organizacao (organização como index);
+
 function agrupar_por_organizacao($f){
   return ordenar_string($f,'organizacao');
 }
 imprimir(agrupar_por_organizacao($funcionarios));
 
 // c) Uma função que retorne a média de salários;
+
 function media($f)
 {
   $sum=0;
@@ -51,7 +55,9 @@ function media($f)
   return $sum/count($f);
 }
 echo media($funcionarios);
+
 // d) Uma função que ordene os funcionarios pelo nome;
+
 function ordenar_por_nome($f){
   return ordenar_string($f,'nome');
 }
@@ -73,6 +79,4 @@ function imprimir($f){
     echo "<br>]<br>";
   }
 }
-
-
 ?>
