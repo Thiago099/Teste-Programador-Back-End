@@ -9,30 +9,30 @@ find_loop(6,$ret);
 return $ret;
 }
 function find_loop($i,&$ret){
-if
-(
-$i % 4 == 0 &&
-$i % 5 == 0 &&
-$i % 6 == 0
-)
-$ret=$i;
-else
-find_loop($i+1,$ret);
+  if
+  (
+    $i % 4 == 0 &&
+    $i % 5 == 0 &&
+    $i % 6 == 0
+  )
+  $ret=$i;
+  else
+  find_loop($i+1,$ret);
 }
 // - Com laços de repetição.
 function repeticao()
 {
-$i=6;
-while
-(
-$i % 4 != 0 ||
-$i % 5 != 0 ||
-$i % 6 != 0
-)
-{
-$i++;
-}
-return $i;
+  $i=6;
+  while
+  (
+    $i % 4 != 0 ||
+    $i % 5 != 0 ||
+    $i % 6 != 0
+  )
+  {
+    $i++;
+  }
+  return $i;
 }
 // Qual técnica gastária mais desempenho da máquina?
   /*
@@ -46,6 +46,4 @@ imprimir(repeticao());
 function imprimir($value){
   echo "<p>$value</p>";
 }
-
-
- ?>
+?>
