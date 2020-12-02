@@ -32,6 +32,8 @@ function mais_jovem($f){
   $ret=$f[0];
   for ($i=1; $i < count($f); $i++) {
       $ii=$f[$i];
+      if($ii['idade']<$ret['idade'])
+        $ret=$ii;
   }
   return $ret['nome'];
 }
