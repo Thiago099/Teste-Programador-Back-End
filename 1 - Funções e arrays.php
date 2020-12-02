@@ -67,7 +67,7 @@ imprimir(ordenar_por_nome($funcionarios));
 
 function ordenar_string($f,$key)
 {
-  usort($f, function($a,$b){return strcmp($a['organizacao'],$b['organizacao']);});
+  usort($f, function($a,$b){return strcmp($a[$key],$b[$key]);});
   return $f;
 }
 function imprimir($f){
