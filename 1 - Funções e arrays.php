@@ -40,7 +40,8 @@ echo mais_jovem($funcionarios);
 // b) Uma função que gere um novo array agrupando os funcionarios por organizacao (organização como index);
 
 function agrupar_por_organizacao($f){
-  return ordenar_string($f,'organizacao');
+  usort($f, function($a,$b){return strcmp($a['organizacao'],$b['organizacao']);});
+  return $f;
 }
 imprimir(agrupar_por_organizacao($funcionarios));
 
@@ -59,17 +60,12 @@ echo media($funcionarios);
 // d) Uma função que ordene os funcionarios pelo nome;
 
 function ordenar_por_nome($f){
-  return ordenar_string($f,'nome');
+  usort($f, function($a,$b){return strcmp($a['nome'],$b['nome']);});
+  return $f;
 }
 imprimir(ordenar_por_nome($funcionarios));
 
 // Funções complementares
-
-function ordenar_string($f,$key)
-{
-  usort($f, function($a,$b){return strcmp($a[$key],$b[$key]);});
-  return $f;
-}
 function imprimir($f){
   foreach ($f as $value) {
     echo "<br>[";
